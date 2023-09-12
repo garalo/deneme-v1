@@ -1,7 +1,7 @@
 {
-  "name": "templateforv2-static",
+  "name": "Deneme-V1 Node express",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a Express.js project.",
   "main": "index.html",
   "scripts": {
     "start": "nodemon app.js",
@@ -23,6 +23,8 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.5.1",
     "nodemon": "^3.0.1"
   }
 }
