@@ -51,13 +51,14 @@ app.use(session({
 app.get("/", (req, res) => {
   if (req.session.user) {
     // Oturum açmış bir kullanıcı varsa, kullanıcı bilgilerine erişebilirsiniz
-    const username = req.session.user.username;
-    //res.send(`Hoş geldiniz, ${username}!`);
-    console.log(`Hoş geldiniz, ${username}!`);
-    res.render("index", { title: "Ana Sayfa" });
+    const user = req.session.user.username;
+    //res.send(`Hoş geldiniz, ${user}!`);
+    console.log(`Hoş geldiniz, ${user}!`);
+    res.render("index", { title: "Ana Sayfa",  user: user });
   } else {
     // Oturum açmış bir kullanıcı yoksa, giriş yapmalarını isteyebilirsiniz
-    res.redirect('/login');
+    //res.redirect('/login');
+    res.render("index", { title: "Ana Sayfa" });
   }
 });
 
